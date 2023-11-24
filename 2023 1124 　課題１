@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char a[100];
+    
+    printf("please Enter a password: ");
+    scanf("%99s",a);
+
+    int upperCasecount=0;
+    int length=strlen(a);
+    
+    for(int i =0;i<length;i++){
+        if(a[i]>='A'&& a[i]　<= 'Z{
+            upperCasecount++;
+        }
+    }
+    
+    if (upperCasecount >0){
+        printf("大丈夫が'%d'含まれています",upperCasecount);
+    }
+    
+    else
+    {
+        printf("大丈夫が含まれていません",);
+    }
+    
+    return 0;
