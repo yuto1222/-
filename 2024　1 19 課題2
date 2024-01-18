@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<time.h>
+
+int main()
+{
+	srand(time(0));
+
+	int A = (rand() % 20) + 1;
+
+	int B = (rand() % 20 - A) + 1;
+
+	int C = 20 - A - B;
+
+	printf("あなたの能力は\nintelligence > %d\nstamina > %d\ncharisma > %d\n", A, B, C);
+	if (A > B && A > C)
+	{
+		printf("あなたは  mage  \n");
+	}
+	if (B > A && B > C)
+	{
+		printf("あなたは　knight \n");
+	}
+	if (C > A && C > B)
+	{
+		printf("あなたは thief　");
+	}
+	return 0;
+}
